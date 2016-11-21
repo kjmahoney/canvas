@@ -10,8 +10,50 @@
   </head>
   <body>
     <canvas id='canvas'></canvas>
+    <canvas id='canvas2'></canvas>
+    <canvas id='canvas3'></canvas>
+    <canvas id='canvas4'></canvas>
     <script>
       var ctx = canvas.getContext('2d')
+      // x,y,width,height
+      ctx.fillStyle = '#000086'
+      ctx.fillRect(0,0,65,60)
+      ctx.fillRect(0,100,65,60)
+      ctx.fillRect(100,0,215,60)
+      ctx.fillRect(100,100,215,60)
+
+      var ctxFrance = canvas2.getContext('2d')
+      ctxFrance.fillStyle = '#0017A2'
+      ctxFrance.fillRect(0,0,100,150)
+      ctxFrance.fillStyle = '#F7263B'
+      ctxFrance.fillRect(200,0,100,150)
+
+
+      var ctx3 = canvas3.getContext('2d')
+      ctx3.fillStyle = 'blue'
+      ctx3.beginPath()
+      ctx3.moveTo(50,50) // x and y
+      ctx3.lineTo(50,100)
+      ctx3.lineTo(100,100)
+      ctx3.fill()
+
+      ctx3.moveTo(100,20)
+      ctx3.arc(90,20,10,0,Math.PI*2)
+      ctx3.closePath()
+      ctx3.stroke()
+
+      var ctx4 = canvas4.getContext('2d')
+      ctx4.fillStyle = 'blue'
+      ctx4.moveTo(100,20)
+      ctx4.arc(90,20,10,0,Math.PI*2)
+
+      ctx4.fillStyle = 'blue'
+      ctx4.moveTo(150,20)
+      ctx4.arc(140,20,10,0,Math.PI*2)
+
+      ctx4.moveTo(145,60)
+      ctx4.arc(115,60,30,0,Math.PI*1)
+      ctx4.stroke()
     </script>
   </body>
 </html>
